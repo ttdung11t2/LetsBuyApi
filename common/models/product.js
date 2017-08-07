@@ -1,14 +1,13 @@
-'use strict';
-import _ from 'lodash'
+import _ from 'lodash';
 
-module.exports = (Product) => {
+export default Product => {
   // Define remote method
   Product.transferData = async (data, cb) => {
     try {
-      const returnData = await returnDataPromise(data)
-      cb(null, returnData)
+      const returnData = await returnDataPromise(data);
+      cb(null, returnData);
     } catch (error) {
-      cb(error)
+      cb(error);
     }
     
     // Fake promise
@@ -18,9 +17,9 @@ module.exports = (Product) => {
           resolve({
             success: true,
             data: data
-          })
+          });
         } else {
-          reject("Invalid parameter.")
+          reject("Invalid parameter.");
         }
       })
     }

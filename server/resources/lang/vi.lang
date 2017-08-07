@@ -1,0 +1,3 @@
+// COMMON
+app.hello = Xin chào
+app.fullName = Tên đầy đủ

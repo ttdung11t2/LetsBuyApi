@@ -1,0 +1,3 @@
+// COMMON
+app.hello = Hello
+app.fullName = Full name
