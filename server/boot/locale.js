@@ -28,7 +28,7 @@ function refreshLangMiddleware(req, res, next) {
 
 function langMiddleware(req, res, next) {
   // export "lang" method to views
-  res.locals.lang = res.locals._ = (key, params) => _lang.getLanguageItem(res.locals.locale, key, params);
+  res.locals.lang = (key, params) => _lang.getLanguageItem(res.locals.locale, key, params);
   
   if (res.locals.locale && _lang.isSupportLanguage(res.locals.locale)) {
     next();
